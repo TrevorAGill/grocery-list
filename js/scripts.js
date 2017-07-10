@@ -2,8 +2,10 @@ var groceries = [];
 
 function displayList(){
   $("#groceryInput").hide();
+  groceries.sort();
 
   groceries.forEach(function(grocery){
+    grocery = grocery.toUpperCase();
     $("#groceryList").append("<li>" + grocery + "</li>");
   })
 
@@ -14,8 +16,14 @@ function displayList(){
 $(document).ready(function(){
   $("#groceryInput").submit(function(event){
     var item = $("input#groceryitem").val();
+    // $("input#groceryitem").val() = "";
     groceries.push(item);
+    this.reset();
     event.preventDefault();
   });
-  var bob = 1;
 });
+
+
+
+// groceries.sort();
+// groceries.toUpperCase();
