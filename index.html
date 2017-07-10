@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src = "js/jquery-3.2.1.js"></script>
+    <script src = "js/scripts.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <title>Grocery List</title>
+  </head>
+  <body>
+    <div class="well">
+      <h1>Grocery List</h1>
+      <form id="groceryInput">
+        <label for="groceryitem">Grocery Item</label>
+        <input id="groceryitem" class="form-control" type="text">
+        <button type="submit" class="btn btn-primary">Add Item</button>
+        <button type="button" class="btn btn-warning" onclick="displayList()">Show List</button>
+      </form>
+    </div>
+    <div class="well">
+      <ul id ="groceryList">
+      </ul>
+    </div>
+  </body>
+</html>
